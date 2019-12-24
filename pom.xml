@@ -21,4 +21,29 @@
 		<module>javamelody-test-webapp</module>
 		<module>javamelody-objectfactory</module>
 	</modules>
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-report-plugin</artifactId>
+				<version>3.0.0-M3</version>
+				<reportSets>
+					<reportSet><!-- aggregate reportSet, to define in poms having modules -->
+						<id>aggregate</id>
+						<inherited>false</inherited><!-- don't run aggregate in child modules -->
+						<reports>
+							<report>aggregate</report>
+						</reports>
+					</reportSet>
+				</reportSets>
+			</plugin>
+		</plugins>
+	</reporting>
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-surefire-report-plugin</artifactId>
+			<version>3.0.0-M3</version>
+		</dependency>
+	</dependencies>
 </project>
