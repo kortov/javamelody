@@ -87,7 +87,7 @@ public class TestJdbcDriver {
 	 * @throws SQLException e */
 	@Test
 	public void testAcceptsURL() throws SQLException {
-		assertTrue("acceptsURL", driver.acceptsURL(null));
+		assertFalse("acceptsURL", driver.acceptsURL(null));
 	}
 
 	/** Test. */
